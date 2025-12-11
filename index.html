@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deema Almousa | Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!--Header-->
+  <header>
+    <div class="logo">Deema Almousa</div>
+    <div class="header-center">
+      <span id="greeting" class="header-greeting"></span>
+    </div>
+    <nav class="navbar">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+
+    <!-- this shows the first part of the website -->
+    <section id="home" class="intro">
+      <div class="intro-content">
+    <h1>Deema Almousa | Software Engineering Student </h1> 
+    <p> Passionate about UI/UX,  React development , and creating simple, usable digital experiences.</p>
+</div>
+ </section>
+    
+<!-- About Section -->
+<section id="about" class="section">
+  <div class="about">  
+    <div class="profile-pic">
+      <img src="assets/images/profile pic.png" alt="Deema's Profile Picture">
+    </div>
+    <div class="about-details">
+      <h2>About Me</h2>
+      <p>
+        I'm <strong>Deema Almousa</strong>, a Software Engineering student at KFUPM with a growing passion 
+        for UI/UX, React development, and building practical, user-focused applications.
+      </p>
+      <p>
+        I love taking ideas from concept to execution—whether it’s designing intuitive user experiences 
+        or participating in hackathons to solve problems creatively and collaboratively.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section">
+    <div class="projects-header">
+      <h2>Projects</h2>
+  
+      <div class="project-filter">
+        <label for="level">Filter by Level:</label>
+        <select id="level">
+          <option value="all">All</option>
+          <option value="beginner">Beginner</option>
+          <option value="advanced">Advanced</option>
+        </select>
+      </div>
+    </div>
+  
+    <p>Here are some of my projects I worked on:</p>
+  
+    <div class="projects-container">
+  
+      <!-- LOGICHEM -->
+      <div class="project" project-level="advanced"
+           project-title="Logichem"
+           project-description="An AI-powered platform that connects industries for chemical waste exchange to promote sustainability. 
+        I led UI/UX design and we won 2nd place at Jada30 Hackathon."
+           project-logo="assets/images/logichem.png"
+           project-photo="assets/images/IMG_4380.jpg"
+           project-link="https://preview--duplicate-magic.lovable.app/login">
+  
+        <img src="assets/images/logichem.png" alt="Logichem Logo" />
+        <h3 class="project-title">Logichem</h3>
+      </div>
+  
+      <!-- CONNECT -->
+      <div class="project" project-level="advanced"
+           project-title="Connect"
+           project-description="<strong>Overview:</strong> A social networking app designed to help users build meaningful and positive connections by sharing life updates in a safe environment.<br><br>
+       
+       <strong>Role:</strong> Designed part of the application's structure using JavaFX, focusing on layout, navigation flow, and user interaction logic.<br><br>
+
+       <strong>Goal:</strong> Encourage healthy digital relationships and provide a platform for users to communicate in a more meaningful way.
+     "
+           project-logo="assets/images/connect.png"
+           project-link="https://github.com/Deemazm/ICS108-project.git">
+  
+        <img src="assets/images/connect.png" alt="Connect Logo" />
+        <h3 class="project-title">Connect</h3>
+      </div>
+  
+      <!-- CLUBZONE -->
+      <div class="project" project-level="beginner"
+           project-title="ClubZone"
+           project-description="
+     <strong>Overview:</strong> A campus platform that helps students discover clubs, join events, and engage in university activities.<br><br>
+     <strong>Role:</strong> UI/UX Designer.<br><br>
+     <strong>Impact:</strong> Improved club engagement and event visibility at KFUPM.
+   "
+           project-logo="assets/images/clubzone.png">
+  
+        <img src="assets/images/clubzone.png" alt="ClubZone Logo" />
+        <h3 class="project-title">ClubZone</h3>
+      </div>
+  
+      <!-- WASL -->
+      <div class="project" project-level="beginner"
+           project-title="Wasl"
+           project-description="
+      <strong>Overview:</strong> A volunteering platform that connects students with community service opportunities.<br><br>
+      <strong>Role:</strong> Public relations & frontend designer.<br><br>
+      <strong>Impact:</strong> Helped students easily access volunteering opportunities at KFUPM.
+    "
+           project-logo="assets/images/wasl.png">
+  
+        <img src="assets/images/wasl.png" alt="Wasl Logo" />
+        <h3 class="project-title">Wasl</h3>
+      </div>
+  
+    </div> 
+  </section> 
+
+
+
+      <!-- Contact Form -->
+    <section id="contact" class="section">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out by filling out this form:</p>
+    
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name">
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email">
+        
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your message"></textarea>
+        
+        <input type="submit" value="Submit">
+        
+      </form>
+    </section>
+
+    <section id="quotes" class="section">
+      <h2>Quote of the day</h2>
+      <p id="quote-text"></p>
+      <p id="quote-author"></p>
+    </section>
+   <!-- Modal Background -->
+
+<div id="project-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <img id="modal-logo" class="modal-logo" src="" alt="Project Logo">
+
+    <h2 id="modal-title" class="modal-title"></h2>
+
+    <p id="modal-description" class="modal-description"></p>
+
+
+    <img id="modal-photo" class="modal-photo" src="" alt="Winning Photo">
+    <a id="modal-link" href="#" target="_blank" class="modal-link">
+      🔗 View Project Website
+    </a>
+    
+  </div>
+</div>
+
+
+    
+  </main>
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+ 
+      
